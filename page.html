@@ -1,0 +1,36 @@
+<html>
+  <head>
+  <title>Active Pull Requests</title>
+  </head>
+  <body>
+  <h1>{{ rowcount }} Pull Requests</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>Creator</td>
+          <td>Repository</td>
+          <td>Number</td>
+          <td>Title</td>
+          <td>Created</td>
+          <td>assignee</td>
+          <td>labels</td>
+          <td>Mergeable State</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row.creator }}</td>
+          <td>{{ row.repo_name }}</td>
+          <td><a href="{{ row.html_url }}">{{ row.number }}</a></td>
+          <td>{{ row.title }}</td>
+          <td>{{ row.creation_time.strftime('%d-%m-%Y') }}</td>
+          <td>{{ row.assignee }}</td>
+          <td>{{ row.labels }}</td>
+          <td>{{ row.mergeable_state }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
