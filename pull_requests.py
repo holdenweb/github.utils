@@ -2,34 +2,46 @@ import itertools
 import os
 import urllib
 
-import github3
+from collections import namedtuple
+
+from github import Github
+import jinja2
+
+pr_rname = namedtuple("pr_rname", ['pr', 'repo'])
+tbl_row = namedtuple("tbl_row", ['creator', 'repo_name', 'number', 'title', 'creation_time', 'assignee', 'labels', 'mergeable_state', 'html_url'])
+template = jinja2.Template(open("page.html").read())
 
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 ORG_NAME = os.environ['GITHUB_ORGANISATION']
 
 os.chdir('repos')
-gh = github3.login(token=GITHUB_TOKEN)
+gh = Github(GITHUB_TOKEN)
 
-org = gh.organization(ORG_NAME)
+org = gh.get_organization(ORG_NAME)
 
 prs = []
-for repo in org.repositories(type="all"):
-    for pr in repo.pull_requests(state='open'):
-        prs.append((pr, repo.name))
-    break
+for repo in org.get_repos("private"):
+    for pr in repo.get_pulls('open'):
+        prs.append(pr_rname(pr, repo))
+
 
 def pr_sort(r):
-   return (r[0].user.login, r[1], r[0].mergeable_state)
+   return (r.pr.user.name, r.repo.name, r.pr.mergeable_state)
 
 prs.sort(key=pr_sort)
 
-print("=======", len(prs), "issues =======")
-for (user_login, repo, ms), pr_list in itertools.groupby(prs,key=pr_sort):
-    print("Pull requests for user", user_login)
-    for pr, repo_name in prs:
-        print("==== {} Repo {} =====".format(pr.user.login, repo_name))
-        print(pr.title, "created on", pr.created_at)
-        print(pr.assignee)
-        print("Mergeable state:", pr.mergeable_state if pr.mergeable_state else "unknown")
-        print(getattr(pr.assignee, 'name', '-'))
-        print(pr.url)
+rows = []
+for pr, repo in prs:
+    issue = repo.get_issue(pr.number)
+    labels = [l.name for l in issue.get_labels()]
+    rows.append(tbl_row(pr.user.name.split()[0],
+                       repo.name,
+                       pr.number,
+                       pr.title,
+                       pr.created_at,
+                       pr.assignee.name.split()[0] if pr.assignee else "-",
+                       ", ".join(labels),
+                       pr.mergeable_state if pr.mergeable_state else "unknown",
+                       pr.html_url))
+
+print(template.render(rows=rows, rowcount=len(rows)), file=open("/tmp/test.html", "w"))
