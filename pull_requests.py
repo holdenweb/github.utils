@@ -8,7 +8,9 @@ from github import Github
 import jinja2
 
 pr_rname = namedtuple("pr_rname", ['pr', 'repo'])
-tbl_row = namedtuple("tbl_row", ['creator', 'repo_name', 'number', 'title', 'creation_time', 'assignee', 'labels', 'mergeable_state', 'html_url'])
+tbl_row = namedtuple("tbl_row",
+                     ['creator', 'repo_name', 'number', 'title', 'creation_time',
+                      'assignee', 'labels', 'mergeable_state', 'html_url'])
 template = jinja2.Template(open("page.html").read())
 
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
