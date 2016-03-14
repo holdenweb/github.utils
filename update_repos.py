@@ -12,7 +12,7 @@ gh = github3.login(token=GITHUB_TOKEN)
 org = gh.organization(ORG_NAME)
 
 for repo in org.repositories(type="all"):
-    print("==== {} ====".format(repo.name))
+    print("==== {}: {} ====".format(repo.name, repo.ssh_url))
     if os.path.exists(repo.name):
         os.system("cd {}; git pull".format(repo.name))
     else:
