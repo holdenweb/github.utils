@@ -1,3 +1,4 @@
 repos
 *.pyc
 .ipynb_checkpoints
+.env
