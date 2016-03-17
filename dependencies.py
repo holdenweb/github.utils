@@ -16,27 +16,31 @@ groups (some are depuired only for development, some only for testing, and so on
 import os
 
 from glob import glob
+from itertools import zip_longest
 
-repos = [line.strip() for line in open("repos.txt") if line!='\n']
+repo_names = [line.strip() for line in open("repos.txt") if line!='\n']
 
 class Module:
+    dep_dict = {}
     def __init__(self, name):
         self.name = name
         self._deps = set()       # Direct dependencies
         self._trans_deps = set() # Their dependencies, and theirs ...
         self.trans_done = False
+        Module.dep_dict[name] = self
     def add_dep(self, dep):
         self._deps.add(dep)
     @property
     def trans_deps(self):
         if not self.trans_done:
-            #print("Computing transitive dependencies for", self.name)
+            print("+++ Computing transitive dependencies for", self.name)
             for dep in self._deps:
-                if dep in dep_dict:
-                    module = dep_dict[dep]
-                    self._trans_deps = self._trans_deps.union(module.trans_deps)
+                if dep in Module.dep_dict:
+                    module = Module.dep_dict[dep]
+                    print("Adding dependencies from", module.name, "to", self.name, ":\n", ", ".join(sorted(module.trans_deps)))
+                    self._trans_deps |= module.trans_deps
             self.trans_done = True
-            #print(self.name, "transitive dependencies done")
+            print(self.name, "transitive dependencies done")
         return self._trans_deps.union(self._deps)
     def provides(self, dep):
         if dep in self.trans_reps({}):
@@ -54,42 +58,47 @@ def lines_of(f):
         yield line.strip()
 
 def get_deps():
-    dep_dict = {}
-    for repo in repos:
-        deps = glob(os.path.join("repos", repo, "requirements*.txt"))
-        dep_dict[repo] = repo_dep = Module(repo)
-        for dep in deps:
-            #print("Processing", dep)
-            for line in lines_of(open(dep)):
+    for repo_name in repo_names:
+        print("+++ Recording dependencies for repo", repo_name)
+        dep_files = glob(os.path.join("repos", repo_name, "requirements*.txt"))
+        repo_dep = Module.dep_dict[repo_name] = Module(repo_name)
+        for dep_file in dep_files:
+            print("--- Processing", dep_file)
+            for line in lines_of(open(dep_file)):
                 if line.startswith("-e ."):
                     continue
                 if line.startswith("-e git+git@github.com:bmlltech"):
-                    #print("Extras on", dep)
+                    #print("Extras on", line)
                     _, line = line.split("=")
+                print("   Adding direct dependency", line)
                 repo_dep.add_dep(line)
-    return dep_dict
+    return Module.dep_dict
 
 if __name__ == "__main__":
     dep_dict = get_deps()
     for name, module in dep_dict.items():
-        module.trans_deps
+        print("### Computing transitive dependencies for", name)
+        deps = module.trans_deps
 
     #for repo in sorted(dep_dict):
         #print("===", repo, "===")
         #for dep in sorted(dep_dict[repo].deps):
             #print('\t', dep)
     
-    
+    fline = "{:28s} {:28s} {:28s}".format
     for repo in sorted(dep_dict):
-        print("===", repo, "===")
-        for dep in sorted(dep_dict[repo]._deps):
-            print('\t', dep)
+        print("\n\n===", repo, "===")
+        print(fline("Module dependecies", "Transitive dependencies", "Excludable"))
+        module = dep_dict[repo]
+        excludables = module._deps & module.trans_deps
+        for mdep, tdep, xdep in zip_longest(sorted(module._deps), sorted(module.trans_deps), sorted(excludables), fillvalue=""):
+            print(fline(mdep, tdep, xdep))
     
     all_modules = set()
     for name, module in dep_dict.items():
         all_modules = all_modules.union(module.trans_deps)
 
-    print("\n\n\n----- All  modules -----\n\n")
-    for name in sorted(all_modules):
-        print(name)
-    print("Finished")
+        #print("\n\n\n----- All  modules -----\n\n")
+        #for name in sorted(all_modules):
+            #print(name)
+        #print("Finished")
