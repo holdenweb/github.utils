@@ -4,12 +4,12 @@ from dependencies import Module
 
 class testEverything(TestCase):
     def setUp(self):
-        self.mod = Module("MainModule")
-        self.dep = Module("dependency")
+        self.main_mod = Module("MainModule")
+        self.dep_mod = Module("dependency")
         
     def test_type(self):
-        self.assertIsInstance(self.mod, Module)
-        self.assertIsInstance(self.dep, Module)
+        self.assertIsInstance(self.main_mod, Module)
+        self.assertIsInstance(self.dep_mod, Module)
     
     def test_dict_presence(self):
         self.assertIn("MainModule", Module.dep_dict)
@@ -17,15 +17,24 @@ class testEverything(TestCase):
 
     def test_add_deps(self):
         for dep in "this", "that", "the_other":
-            self.mod.add_dep(dep)
-        self.assertEqual(len(self.mod._deps), 3)
+            self.main_mod.add_dep(dep)
+        self.assertEqual(len(self.main_mod._deps), 3)
     
     def test_trans_deps(self):
-        self.mod.add_dep("dependency")
-        for dep in "this", "that", "the_other":
-                    self.dep.add_dep(dep)
-        self.assertEqual(self.mod._deps, set(["dependency"]))
-        self.assertEqual(self.mod.trans_deps.intersection(set(["this", "that", "the_other"])), set())
+        self.main_mod.add_dep("dependency")
+        for dep in "this", "that":
+                    self.dep_mod.add_dep(dep)
+        self.assertEqual(self.main_mod._deps, set(["dependency"]))
+        self.assertEqual(self.main_mod.trans_deps, set(["this", "that"]))
+
+    def test_multilple_dep_levels(self):
+        new_top = Module("toplevel")
+        new_top.add_dep("MainModule")
+        self.main_mod.add_dep("dependency")
+        for dep in "this", "that":
+            self.dep_mod.add_dep(dep)
+        self.assertEqual(new_top.trans_deps, set(["dependency", "this", "that"]))
+        
 
 if __name__ == "__main__":
      main()

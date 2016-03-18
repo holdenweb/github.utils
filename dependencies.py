@@ -29,27 +29,20 @@ class Module:
         self.trans_done = False
         Module.dep_dict[name] = self
     def add_dep(self, dep):
+        #print("Adding direct dependency", dep, "to", self.name)
         self._deps.add(dep)
     @property
     def trans_deps(self):
         if not self.trans_done:
-            print("+++ Computing transitive dependencies for", self.name)
+            #print("+++ Computing transitive dependencies for", self.name)
             for dep in self._deps:
                 if dep in Module.dep_dict:
                     module = Module.dep_dict[dep]
-                    print("Adding dependencies from", module.name, "to", self.name, ":\n", ", ".join(sorted(module.trans_deps)))
+                    #print("Adding dependencies from", module.name, "to", self.name, ":\n", ", ".join(sorted(module.trans_deps)))
                     self._trans_deps |= module._deps
             self.trans_done = True
-            print(self.name, "transitive dependencies done")
+            #print(self.name, "transitive dependencies done:", *self.trans_deps)
         return self._trans_deps
-    def provides(self, dep):
-        if dep in self.trans_reps({}):
-            return True
-        #for dep in self._deps:
-            #if dep in dep_dict:
-                #if dep_dict[dep].provides(dep):
-                    #return True
-        #return False
 
 def lines_of(f):
     for line in f:
@@ -59,32 +52,25 @@ def lines_of(f):
 
 def get_deps():
     for repo_name in repo_names:
-        print("+++ Recording dependencies for repo", repo_name)
+        #print("+++ Recording dependencies for repo", repo_name)
         dep_files = glob(os.path.join("repos", repo_name, "requirements*.txt"))
         repo_dep = Module.dep_dict[repo_name] = Module(repo_name)
         for dep_file in dep_files:
-            print("--- Processing", dep_file)
+            #print("--- Processing", dep_file)
             for line in lines_of(open(dep_file)):
                 if line.startswith("-e ."):
                     continue
                 if line.startswith("-e git+git@github.com:bmlltech"):
                     #print("Extras on", line)
                     _, line = line.split("=")
-                print("   Adding direct dependency", line)
                 repo_dep.add_dep(line)
     return Module.dep_dict
 
 if __name__ == "__main__":
     get_deps()
     for name, module in Module.dep_dict.items():
-        print("### Computing transitive dependencies for", name)
         deps = module.trans_deps
 
-    #for repo in sorted(dep_dict):
-        #print("===", repo, "===")
-        #for dep in sorted(dep_dict[repo].deps):
-            #print('\t', dep)
-    
     fline = "{:28s} {:28s} {:28s}".format
     for repo in sorted(Module.dep_dict):
         print("\n\n===", repo, "===")
@@ -106,7 +92,8 @@ if __name__ == "__main__":
             if dep not in Module.dep_dict:
                 all_modules.add(dep)
 
-    print("\n\n\n----- All external dependencies -----\n\n")
+    print("\n\n\n----- All external dependencies -----\n")
     for name in sorted(all_modules):
-        print(name)
+        if name not in Module.dep_dict:
+            print(name)
     print("\n\n\nFinished")
