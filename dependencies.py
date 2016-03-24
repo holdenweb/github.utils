@@ -10,7 +10,7 @@ can then eliminate the dependencies that will be transitively provided.
 Ultimately the goal is to reduce the depuirements files of projects in size.
 
 In order to do this effectively it may be necessary to split dependencies into
-groups (some are depuired only for development, some only for testing, and so on).
+groups (some are required only for development, some only for testing, and so on).
 """
 
 import os
