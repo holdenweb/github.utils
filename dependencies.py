@@ -1,13 +1,13 @@
 """
 Evaluate project dependencies recursively.
 
-First, enumerate all the direct depuirements of each project, so we know which
+First, enumerate all the direct requirements of each project, so we know which
 dependencies it provides.
 
 By accumulating a list of the dependencies *provided* by those dependecies, we
 can then eliminate the dependencies that will be transitively provided.
 
-Ultimately the goal is to reduce the depuirements files of projects in size.
+Ultimately the goal is to reduce the requirements files of projects in size.
 
 In order to do this effectively it may be necessary to split dependencies into
 groups (some are depuired only for development, some only for testing, and so on).
@@ -39,7 +39,7 @@ class Module:
                 if dep in Module.dep_dict:
                     module = Module.dep_dict[dep]
                     #print("Adding dependencies from", module.name, "to", self.name, ":\n", ", ".join(sorted(module.trans_deps)))
-                    self._trans_deps |= module._deps
+                    self._trans_deps |= module._deps | module.trans_deps
             self.trans_done = True
             #print(self.name, "transitive dependencies done:", *self.trans_deps)
         return self._trans_deps
@@ -79,9 +79,10 @@ if __name__ == "__main__":
         print(fline(*("-"*25, )*3))
         module = Module.dep_dict[repo]
         excludables = module._deps & module.trans_deps
-        for mdep, tdep, xdep in zip_longest(sorted(module._deps),
-                                            sorted(excludables),
-                                            sorted(module._deps - excludables),
+        necessaries = module._deps - excludables
+        for mdep, tdep, xdep in zip_longest(sorted(m for m in module._deps if m in Module.dep_dict),
+                                            sorted(e for e in excludables if e in Module.dep_dict),
+                                            sorted(n for n in necessaries if n in Module.dep_dict),
                                             fillvalue=""):
             print(fline(mdep, tdep, xdep))
     
