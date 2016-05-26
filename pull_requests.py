@@ -28,7 +28,7 @@ for repo in org.get_repos("private"):
 
 
 def pr_sort(r):
-   return (r.pr.user.name, r.repo.name, r.pr.mergeable_state)
+    return (r.pr.user.name, r.repo.name, r.pr.mergeable_state)
 
 prs.sort(key=pr_sort)
 

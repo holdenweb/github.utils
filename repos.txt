@@ -12,4 +12,3 @@ pulsar-odm
 pulsar
 kernel_gateway
 kernel_instance_manager
-

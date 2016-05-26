@@ -22,7 +22,8 @@ gh = Github(GITHUB_TOKEN)
 org = gh.get_organization(ORG_NAME)
 
 for repo in org.get_repos("private"):
-    brs = list(repo.get_branches())
-    print("===== {} ===== {} branches =====".format(repo.name, len(brs)))
-    for br in brs:
-        print("    ", br.name)
+    brs = [br for br in repo.get_branches() if not br.name.startswith("release")]
+    if len(brs) > 3:
+        print("{}: {} branches".format(repo.name, len(brs)))
+#        for br in brs:
+#            print("    ", br.name)
