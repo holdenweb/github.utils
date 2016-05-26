@@ -31,7 +31,6 @@ class Module:
     def add_dep(self, dep):
         #print("Adding direct dependency", dep, "to", self.name)
         self._deps.add(dep)
-    @property
     def trans_deps(self):
         if not self.trans_done:
             #print("+++ Computing transitive dependencies for", self.name)
@@ -41,7 +40,7 @@ class Module:
                     #print("Adding dependencies from", module.name, "to", self.name, ":\n", ", ".join(sorted(module.trans_deps)))
                     self._trans_deps |= module._deps | module.trans_deps
             self.trans_done = True
-            #print(self.name, "transitive dependencies done:", *self.trans_deps)
+            print(self.name, "transitive dependencies done:", *self.trans_deps())
         return self._trans_deps
 
 def lines_of(f):
@@ -69,7 +68,7 @@ def get_deps():
 if __name__ == "__main__":
     get_deps()
     for name, module in Module.dep_dict.items():
-        deps = module.trans_deps
+        deps = module.trans_deps()
 
     fline = "{:28s} {:28s} {:28s}".format
     for repo in sorted(Module.dep_dict):
@@ -78,17 +77,24 @@ if __name__ == "__main__":
         print(fline("Module dependecies", "transitive dependencies", "Leaving"))
         print(fline(*("-"*25, )*3))
         module = Module.dep_dict[repo]
+<<<<<<< Updated upstream
         excludables = module._deps & module.trans_deps
         necessaries = module._deps - excludables
         for mdep, tdep, xdep in zip_longest(sorted(m for m in module._deps if m in Module.dep_dict),
                                             sorted(e for e in excludables if e in Module.dep_dict),
                                             sorted(n for n in necessaries if n in Module.dep_dict),
+=======
+        excludables = module._deps & module.trans_deps()
+        for mdep, tdep, xdep in zip_longest(sorted(module._deps),
+                                            sorted(excludables),
+                                            sorted(module._deps - excludables),
+>>>>>>> Stashed changes
                                             fillvalue=""):
             print(fline(mdep, tdep, xdep))
     
     all_modules = set()
     for name, module in Module.dep_dict.items():
-        all_modules = all_modules.union(module.trans_deps)
+        all_modules = all_modules.union(module.trans_deps())
         for dep in module._deps:
             if dep not in Module.dep_dict:
                 all_modules.add(dep)

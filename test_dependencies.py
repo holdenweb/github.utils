@@ -25,7 +25,7 @@ class testEverything(TestCase):
         for dep in "this", "that":
                     self.dep_mod.add_dep(dep)
         self.assertEqual(self.main_mod._deps, set(["dependency"]))
-        self.assertEqual(self.main_mod.trans_deps, set(["this", "that"]))
+        self.assertEqual(self.main_mod.trans_deps(), set(["this", "that"]))
 
     def test_multiple_dep_levels(self):
         new_top = Module("toplevel")
@@ -34,8 +34,3 @@ class testEverything(TestCase):
         new_top.add_dep("MainModule")
         self.main_mod.add_dep("dependency")
         self.assertEqual(new_top.trans_deps, set(["dependency", "this", "that"]))
-        
-
-if __name__ == "__main__":
-    main()
-     
