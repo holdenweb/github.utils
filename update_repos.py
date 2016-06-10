@@ -1,5 +1,6 @@
 import os
 import urllib
+import sys
 
 import github3
 
@@ -11,8 +12,13 @@ gh = github3.login(token=GITHUB_TOKEN)
 
 org = gh.organization(ORG_NAME)
 
-for repo in org.repositories(type="all"):
-    print("==== {}: {} ====".format(repo.name, repo.ssh_url))
+if len(sys.argv) > 1:
+    repolist = [gh.repository(ORG_NAME, name) for name in sys.argv[1:]]
+else:
+    repolist = org.repositories(type="all")
+
+for repo in repolist:
+    print("==== {}: {}".format(repo.name, repo.ssh_url))
     if os.path.exists(repo.name):
         os.system("cd {}; git checkout master && git pull; git checkout develop && git pull".format(repo.name))
     else:
