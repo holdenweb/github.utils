@@ -11,11 +11,14 @@ gh = github3.login(token=GITHUB_TOKEN)
 
 org = gh.organization(ORG_NAME)
 
+def repo_name(file_path):
+    return os.path.dirname(file_path).split('/')[-1]
+
 os.system("find . -name package_meta.py > package_metas")
 with open("package_metas") as filenames:
     for i, fn in enumerate(filenames):
         with open(fn.strip()) as lines:
             for line in lines:
-                if "BASE" in line:
-                    print(fn.strip(), ":", line, end="")
-                    break
+                if "_VERSION =" in line:
+                    print(repo_name(fn), ":", line, end="")
+                    

@@ -24,7 +24,7 @@ for filename in data:
     inf = open(filename)
     for reqt in inf:
         reqt = reqt.strip()
-        if reqt == "" or reqt.startswith("#"):
+        if not reqt or reqt.startswith("#"):
             continue
         repo = os.path.dirname(filename)
         reqdict[reqt.lower()].append(filename)
