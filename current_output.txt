@@ -1,0 +1,1684 @@
+463 requirements in all
+
+aiobotocore==0.0.5  # pinned as it is a very early version of the library and the api could change
+  bmll-api/requirements.txt
+
+aiohttp ; python_version >= '3.4.1'
+  devops/data/requirements-external-all.txt
+
+aiohttp==0.22.5
+  bmll-portal/requirements.txt
+
+alabaster
+  devops/data/requirements-external-all.txt
+
+alabaster>=0.7.8
+  algoapi/requirements-dev.txt
+  bmll-docs/requirements-dev.txt
+
+alembic
+  devops/data/requirements-external-all.txt
+
+alembic==0.8.5
+  kernel_instance_manager/requirements.txt
+
+alembic>=0.8.6,<1.0
+  exchanges/requirements.txt
+
+alembic>=0.8.7,<1.0.0
+  dbutils/requirements.txt
+
+algoapi==0.4.7
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+algoapi>=0.3.9
+  market_impact/requirements.txt
+  monorepo/src/market_impact/requirements.txt
+
+algoapi>=0.4.6
+  bmll-docs/requirements-dev.txt
+
+algotick==0.4.4
+  bmll-portal/requirements.txt
+
+algotick>=0.3.7
+  market_impact/requirements.txt
+  monorepo/src/market_impact/requirements.txt
+
+algotick>=0.4.1
+  exchanges/requirements.txt
+  tickdata/requirements.txt
+
+algotick~=0.4.4
+  bmll-api/requirements.txt
+
+ansible
+  devops/data/requirements-external-all.txt
+
+ansible-lint==2.4.2
+  devops/requirements.txt
+
+ansible-lint>=3.2.5
+  devops/data/requirements.txt
+
+ansible-tower-cli
+  devops/data/requirements.txt
+
+ansible==2.1.1.0
+  devops/requirements.txt
+
+ansible>=2.1.1.0
+  devops/data/requirements.txt
+
+ansible_lint
+  devops/data/requirements-external-all.txt
+
+ansible_tower_cli
+  devops/data/requirements-external-all.txt
+
+ansiblebit.launchpad-ppa-webupd8
+  devops/roles.galaxy/ansiblebit.oracle-java/tests/requirements.txt
+
+apipkg
+  devops/data/requirements-external-all.txt
+
+appnope
+  devops/data/requirements-external-all.txt
+
+arch==3.1
+  image-builder/bmll_python3/src/requirements/requirements-pip-optional.txt
+
+argparse
+  devops/data/requirements-external-all.txt
+
+argparse==1.2.1
+  devops/requirements.txt
+
+arrow
+  devops/data/requirements-external-all.txt
+
+arrow>=0.8.0,<1.0
+  exchanges/requirements.txt
+
+asyncio ; python_version >= '3.3'
+  devops/data/requirements-external-all.txt
+
+awscli
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+
+awscli==1.10.17
+  devops/requirements.txt
+
+awscli>=1.10.51
+  devops/data/requirements.txt
+
+babel
+  devops/data/requirements-external-all.txt
+
+backports.shutil-get-terminal-size==1.0.0
+  devops/requirements.txt
+
+backports.shutil_get_terminal_size
+  devops/data/requirements-external-all.txt
+
+backports_abc
+  devops/data/requirements-external-all.txt
+
+bayespy==0.5.6
+  image-builder/bmll_python3/src/requirements/requirements-pip-optional.txt
+
+baysinf==0.0.6
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+baysinf>=0.0.3
+  bmll-docs/requirements-dev.txt
+
+beautifulsoup4
+  bmll-docs/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+  devops/data/requirements.txt
+  lux/requirements-soft.txt
+
+beautifulsoup4>=4.5.0,<5.0
+  exchanges/requirements.txt
+
+beautifulsoup4>=4.5.0,<5.0.0
+  monorepo/src/lux/requirements-soft.txt
+
+behave
+  devops/data/requirements-external-all.txt
+
+behave>=1.2.5,<2.0.0
+  integration-tests/requirements.txt
+
+blist
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+
+blist==1.3.6
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+bmll-api
+  bmll-technologies/requirements.txt
+
+bmll-api==0.7.0
+  bmll-portal/requirements.txt
+
+bmll-dbutils==0.3.6
+  bmll-portal/requirements.txt
+
+bmll-dbutils>=0.2.3
+  lux/requirements.txt
+  monorepo/src/lux/requirements.txt
+
+bmll-dbutils~=0.3.6
+  bmll-api/requirements.txt
+
+bmll-dbutils~=0.3.7
+  exchanges/requirements.txt
+
+bmll-docs==0.4.6
+  bmll-portal/requirements.txt
+
+bmll-lux==0.7.7
+  bmll-portal/requirements.txt
+
+bmll-lux~=0.7.7
+  bmll-api/requirements.txt
+
+bmll-pulsar-odm
+  pulsar-queue/requirements.txt
+
+bmll-pulsar-odm==0.4.15
+  bmll-portal/requirements.txt
+
+bmll-pulsar-odm>=0.4.7,<1.0
+  zzz-pulsar-cloud/requirements.txt
+
+bmll-pulsar-odm>=0.4.8
+  lux/requirements.txt
+  monorepo/src/lux/requirements.txt
+
+bmll-pulsar==1.1.10 # logging does not work in pulsar 2 yet
+  bmll-portal/requirements.txt
+
+bmll-pulsar>=1.1.3
+  monorepo/src/lux/requirements.txt
+
+bmll-pulsar>=1.1.3,<2.0
+  algoapi/requirements-dev.txt
+  lux/requirements.txt
+  monorepo/src/pulsar-odm/requirements.txt
+  pulsar-odm/requirements.txt
+
+bmll-pulsar>=2.0.0
+  zzz-pulsar-cloud/requirements.txt
+
+bmll-pulsar~=1.1
+  bmll-api/requirements.txt
+
+bmll-python
+  bmll-technologies/requirements.txt
+
+bmll-python==0.4.3
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+bmll-python~=0.4.2
+  algoapi/requirements.txt
+
+bmll_dbutils
+  jobserve/requirements.txt
+
+bokeh==0.12.3
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+boto
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+  devops/data/requirements.txt
+
+boto3
+  bmll-technologies/requirements.txt
+  devops/data/requirements-external-all.txt
+
+boto3==1.2.3
+  algotick/requirements.txt
+
+boto3==1.3.0
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+boto3==1.4.0  # pinned to latest tested version compatible with botocore 1.4.28
+  algoapi/requirements.txt
+  exchanges/requirements.txt
+
+boto==2.39.0
+  devops/requirements.txt
+
+boto==2.43.0              # via moto
+  bmll-api/requirements-dev.txt
+
+botocore
+  devops/data/requirements-external-all.txt
+
+botocore==1.3.9
+  algotick/requirements.txt
+  zzz-pulsar-cloud/requirements.txt
+
+botocore==1.4.28
+  bmll-portal/requirements.txt
+
+botocore==1.4.28  # pinned to latest version supported by aiobotocore 0.0.5
+  algoapi/requirements.txt
+  bmll-api/requirements.txt
+  exchanges/requirements.txt
+
+botocore==1.4.8
+  devops/requirements.txt
+
+ccy
+  devops/data/requirements-external-all.txt
+
+celery==3.1.25
+  jobserve/requirements.txt
+
+certifi
+  devops/data/requirements-external-all.txt
+
+cffi
+  devops/data/requirements-external-all.txt
+
+cffi==1.7.0
+  devops/requirements.txt
+
+chardet
+  devops/data/requirements-external-all.txt
+
+click
+  devops/data/requirements-external-all.txt
+
+click==6.6                # via pip-tools
+  bmll-api/requirements-dev.txt
+
+cobertura-clover-transform
+  algoapi/requirements-dev.txt
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  bmll-portal/requirements-dev.txt
+  bmll-python/requirements-dev.txt
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  exchanges/requirements-dev.txt
+  flare/requirements-test.txt
+  jobserve/requirements-dev.txt
+  kernel_gateway/requirements-dev.txt
+  lux/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/logging-utils/requirements-dev.txt
+  monorepo/src/lux/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  playground/requirements-dev.txt
+  pulsar-queue/requirements-dev.txt
+  tickdata/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+
+cobertura-clover-transform<=1.1.4.post1
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+cobertura-clover-transform==1.1.4.post1
+  bmll-api/requirements-dev.txt
+
+cobertura-clover-transform>=1.1.4.post1
+  kernel_instance_manager/requirements-dev.txt
+  monorepo/src/pulsar-odm/requirements-dev.txt
+  pulsar-odm/requirements-dev.txt
+
+cobertura-clover-transform>=1.1.4.post1,<2.0
+  zzz-pulsar-cloud/requirements-dev.txt
+
+colorama
+  devops/data/requirements-external-all.txt
+
+colorama==0.3.3
+  devops/requirements.txt
+
+colorlog>=2.7,<3.0
+  logging-utils/requirements.txt
+  monorepo/src/logging-utils/requirements.txt
+
+coverage
+  algoapi/requirements-dev.txt
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  bmll-portal/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  exchanges/requirements-dev.txt
+  jupyter-extensions/requirements-dev.txt
+  lux/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/jupyter-extensions/requirements-dev.txt
+  monorepo/src/lux/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  playground/requirements-dev.txt
+  pulsar-queue/requirements-dev.txt
+  tickdata/requirements-dev.txt
+
+coverage==4.2
+  bmll-api/requirements-dev.txt
+
+coverage>=4.0.3
+  monorepo/src/pulsar-odm/requirements-dev.txt
+  pulsar-odm/requirements-dev.txt
+
+coverage>=4.0.3,<5.0
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+coverage>=4.1
+  bmll-python/requirements-dev.txt
+
+cryptography
+  devops/data/requirements-external-all.txt
+
+cryptography==1.4
+  devops/requirements.txt
+
+cython
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  exchanges/requirements-dev.txt
+  lux/requirements-dev.txt
+  monorepo/src/lux/requirements-dev.txt
+
+cython<=0.24
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+cython==0.25.1
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+dateutils
+  devops/data/requirements-external-all.txt
+
+decorator
+  devops/data/requirements-external-all.txt
+
+decorator==4.0.9
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+dict.sorted
+  devops/data/requirements-external-all.txt
+
+django
+  devops/data/requirements-external-all.txt
+
+dnspython
+  devops/data/requirements.txt
+
+docker-py==1.9.0
+  kernel_instance_manager/requirements.txt
+
+docker_py
+  devops/data/requirements-external-all.txt
+
+docutils
+  devops/data/requirements-external-all.txt
+
+docutils==0.12
+  devops/requirements.txt
+
+dulwich
+  devops/data/requirements-external-all.txt
+
+ecdsa
+  devops/data/requirements-external-all.txt
+
+ecdsa==0.13
+  devops/requirements.txt
+
+enum34
+  devops/data/requirements-external-all.txt
+
+enum34==1.1.6
+  devops/requirements.txt
+
+exchanges
+  bmll-technologies/requirements.txt
+  jobserve/requirements.txt
+
+exchanges==0.4.9
+  bmll-portal/requirements.txt
+
+exchanges~=0.4.9
+  bmll-api/requirements.txt
+
+execnet
+  devops/data/requirements-external-all.txt
+
+first
+  devops/data/requirements-external-all.txt
+
+first==2.0.1              # via pip-tools
+  bmll-api/requirements-dev.txt
+
+flake8
+  algoapi/requirements-dev.txt
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  bmll-docs/requirements-dev.txt
+  bmll-technologies/prototypes/job-graph/requirements-test.txt
+  devops/data/requirements-external-all.txt
+  flare/requirements-test.txt
+  jupyter-extensions/requirements-dev.txt
+  lux/requirements-dev.txt
+  monorepo/src/jupyter-extensions/requirements-dev.txt
+  monorepo/src/logging-utils/requirements-dev.txt
+  playground/requirements-dev.txt
+  pulsar-queue/requirements-dev.txt
+  tickdata/requirements-dev.txt
+
+flake8-docstrings
+  devops/data/requirements-py3.txt
+  playground/requirements-dev.txt
+
+flake8-docstrings==1.0.2
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+flake8-docstrings>=1.0.2
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  jobserve/requirements-dev.txt
+  kernel_gateway/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+flake8-docstrings>=1.0.2,<2.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+flake8-pep257
+  devops/data/requirements-external-all.txt
+
+flake8==3.0.4
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+flake8==3.2.0
+  bmll-api/requirements-dev.txt
+  bmll-portal/requirements-dev.txt
+  logging-utils/requirements-dev.txt
+
+flake8>=2.6.2
+  bmll-python/requirements-dev.txt
+
+flake8>=3.0.3
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  devops/data/requirements-py3.txt
+  devops/data/requirements.txt
+  exchanges/requirements-dev.txt
+  integration-tests/requirements-dev.txt
+  jobserve/requirements-dev.txt
+  kernel_gateway/requirements-dev.txt
+  kernel_instance_manager/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  monorepo/src/pulsar-odm/requirements-dev.txt
+  pulsar-odm/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+flake8>=3.0.3,<4.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+flake8_docstrings
+  devops/data/requirements-external-all.txt
+
+flask
+  devops/data/requirements-external-all.txt
+
+flask-migrate==1.8.0
+  kernel_instance_manager/requirements.txt
+
+flask-script==2.0.5
+  kernel_instance_manager/requirements.txt
+
+flask-sqlalchemy==2.1
+  kernel_instance_manager/requirements.txt
+
+flask<=0.10.1
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+flask==0.10.1
+  kernel_instance_manager/requirements.txt
+
+flask_migrate
+  devops/data/requirements-external-all.txt
+
+flask_script
+  devops/data/requirements-external-all.txt
+
+flask_sqlalchemy
+  devops/data/requirements-external-all.txt
+
+functools32; python_version < '2.7'
+  devops/data/requirements-external-all.txt
+
+futures; python_version < '3.0'
+  devops/data/requirements-external-all.txt
+
+futures==3.0.5
+  devops/requirements.txt
+
+gnureadline
+  devops/data/requirements-external-all.txt
+
+greenlet
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+  pulsar-queue/requirements.txt
+
+greenlet<=0.4.10
+  monorepo/src/pulsar/requirements.txt
+  pulsar/requirements.txt
+
+greenlet>=0.4.10
+  monorepo/src/pulsar-odm/requirements.txt
+  pulsar-odm/requirements.txt
+
+greenlet>=0.4.10,<1.0
+  zzz-pulsar-cloud/requirements.txt
+
+httplib2
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+  devops/data/requirements.txt
+
+httpretty==0.8.10         # via moto
+  bmll-api/requirements-dev.txt
+
+idna
+  devops/data/requirements-external-all.txt
+
+idna==2.1
+  devops/requirements.txt
+
+imagesize
+  devops/data/requirements-external-all.txt
+
+ipaddress
+  devops/data/requirements-external-all.txt
+
+ipaddress==1.0.16
+  devops/requirements.txt
+
+ipdb
+  devops/data/requirements-external-all.txt
+  integration-tests/requirements-dev.txt
+
+ipdb==0.10.0
+  devops/requirements.txt
+
+ipykernel
+  devops/data/requirements-external-all.txt
+  notebook/requirements.txt
+
+ipykernel==4.3.1
+  kernel_gateway/kernel_gateway/requirements-kernel.txt
+  zzz-kernel_gateway/kernel_gateway/requirements-kernel.txt
+
+ipython
+  devops/data/requirements-external-all.txt
+
+ipython-genutils==0.1.0
+  devops/requirements.txt
+
+ipython==4.2.0
+  devops/requirements.txt
+
+ipython_genutils
+  devops/data/requirements-external-all.txt
+
+itsdangerous
+  devops/data/requirements-external-all.txt
+
+itsdangerous==0.24
+  kernel_instance_manager/requirements.txt
+
+jenkinsapi
+  devops/data/requirements-py3.txt
+  devops/data/requirements.txt
+
+jinja2
+  devops/data/requirements-external-all.txt
+  notebook/requirements.txt
+
+jinja2==2.8
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+jinja2==2.8               # via moto
+  bmll-api/requirements-dev.txt
+
+jmespath
+  devops/data/requirements-external-all.txt
+
+jmespath==0.9.0
+  devops/requirements.txt
+
+jsonschema
+  devops/data/requirements-external-all.txt
+
+jsonschema~=2.5
+  bmll-api/requirements.txt
+
+jupyter
+  baysinf/requirements-dev.txt
+
+jupyter-client
+  notebook/requirements.txt
+
+jupyter-client==4.1.1
+  kernel_gateway/requirements.txt
+  zzz-kernel_gateway/requirements.txt
+
+jupyter-core
+  notebook/requirements.txt
+
+jupyter-core==4.0.6
+  kernel_gateway/requirements.txt
+  zzz-kernel_gateway/requirements.txt
+
+jupyter-kernel-test>=0.2.2
+  image-builder/bmll_python3/tests/container_tests/requirements-dev.txt
+
+jupyter==1.0.0
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+jupyter_client
+  devops/data/requirements-external-all.txt
+
+jupyter_core
+  devops/data/requirements-external-all.txt
+
+keras==1.0.7
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+keyring
+  devops/data/requirements-external-all.txt
+
+keyrings.alt
+  devops/data/requirements-external-all.txt
+
+kitchen
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3.txt
+  devops/data/requirements.txt
+
+lxml
+  bmll-docs/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+  devops/data/requirements.txt
+
+lxml<=3.6.1
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+lxml==3.6.4               # via cobertura-clover-transform
+  bmll-api/requirements-dev.txt
+
+mako
+  devops/data/requirements-external-all.txt
+
+mako==1.0.4
+  kernel_instance_manager/requirements.txt
+
+markdown
+  devops/data/requirements-external-all.txt
+
+markdown==2.6.6
+  bmll-portal/requirements.txt
+  lux/requirements.txt
+
+markdown>=2.6.6,<3.0.0
+  monorepo/src/lux/requirements.txt
+
+market_impact==0.1.4
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+market_impact>=0.1.3
+  bmll-docs/requirements-dev.txt
+
+markupsafe
+  devops/data/requirements-external-all.txt
+
+markupsafe==0.23
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+markupsafe==0.23          # via jinja2
+  bmll-api/requirements-dev.txt
+
+matplotlib
+  baysinf/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+
+matplotlib==1.5.3
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+mccabe
+  algotick/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+
+mccabe==0.5.2
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+mccabe==0.5.2             # via flake8
+  bmll-api/requirements-dev.txt
+
+moto==0.4.29
+  bmll-api/requirements-dev.txt
+
+msgpack-python
+  bmll-technologies/requirements.txt
+  jobserve/requirements.txt
+
+nb-bmll==0.3.2
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+nbstats==0.1.0
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+nbstripout
+  image-builder/requirements-dev.txt
+
+nickjj.nodejs
+  bmll-technologies/deployment/requirements.txt
+
+nose-parameterized>=0.5.0
+  image-builder/bmll_python3/tests/container_tests/requirements-dev.txt
+
+nose>=1.3.7
+  image-builder/bmll_python3/tests/container_tests/requirements-dev.txt
+
+nose_parameterized~=0.5.0
+  integration-tests/requirements.txt
+
+notebook
+  notebook/requirements.txt
+
+notebook==4.2.2
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+notebook>=4
+  jupyter-extensions/requirements.txt
+  monorepo/src/jupyter-extensions/requirements.txt
+
+numba==0.29.0
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+numexpr
+  devops/data/requirements-external-all.txt
+
+numexpr==2.5.2
+  devops/requirements.txt
+
+numexpr==2.6.1
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+numpy
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+
+numpy==1.11.0
+  devops/requirements.txt
+
+numpy==1.11.1
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+numpy>=1.11
+  tickdata/requirements.txt
+
+numpy>=1.11.1
+  baysinf/requirements.txt
+
+numpy>=1.11.1,<2.0
+  algoapi/requirements.txt
+  market_impact/requirements.txt
+  monorepo/src/market_impact/requirements.txt
+
+numpy~=1.11
+  bmll-api/requirements.txt
+
+oauthlib
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+
+oauthlib<1.1.2
+  monorepo/src/pulsar/requirements.txt
+  pulsar/requirements.txt
+
+ordered_set
+  devops/data/requirements-external-all.txt
+
+pandas
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+  devops/roles/make-wheels/files/requirements-py3-binary.txt
+
+pandas==0.18.1
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+pandas>=0.18.0
+  tickdata/requirements.txt
+
+pandas>=0.18.0,<1.0
+  market_impact/requirements.txt
+  monorepo/src/market_impact/requirements.txt
+
+pandas~=0.18.1
+  bmll-api/requirements.txt
+
+paramiko
+  devops/data/requirements-external-all.txt
+
+paramiko==2.0.2
+  devops/requirements.txt
+
+paramiko>=2.0.0,<3.0.0
+  exchanges/requirements.txt
+
+parse
+  devops/data/requirements-external-all.txt
+
+parse_type
+  devops/data/requirements-external-all.txt
+
+path.py
+  devops/data/requirements-external-all.txt
+
+path.py==8.1.2
+  kernel_instance_manager/requirements.txt
+
+pathlib2==2.1.0
+  devops/requirements.txt
+
+pep257
+  devops/data/requirements-external-all.txt
+
+pep8
+  algotick/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+
+pep8==1.7.0
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+pep8>=1.7.0
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  jobserve/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+pep8>=1.7.0,<2.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+pexpect
+  devops/data/requirements-external-all.txt
+
+pexpect==4.0.1
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+pickleshare
+  devops/data/requirements-external-all.txt
+
+pickleshare==0.6
+  kernel_instance_manager/requirements.txt
+
+pickleshare==0.7.2
+  devops/requirements.txt
+
+pillow
+  devops/data/requirements-external-all.txt
+  devops/roles/make-wheels/files/requirements-py3-binary.txt
+
+pillow~=3.3
+  bmll-api/requirements.txt
+
+pip
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+
+pip-tools==1.7.0
+  bmll-api/requirements-dev.txt
+
+pip>=8.1.1
+  kernel_gateway/kernel_gateway/requirements-kernel.txt
+  zzz-kernel_gateway/kernel_gateway/requirements-kernel.txt
+
+pip>=8.1.2
+  devops/data/requirements.txt
+
+pip_tools
+  devops/data/requirements-external-all.txt
+
+pkginfo
+  devops/data/requirements-external-all.txt
+
+pkginfo!=1.3.0
+  lux/requirements-dev.txt
+  lux/requirements.txt
+  monorepo/src/lux/requirements.txt
+
+pkginfo!=1.3.0,<2.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+plotly==1.12.9
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+psutil
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  kernel_gateway/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+
+psutil<=4.1.0
+  monorepo/src/pulsar/requirements.txt
+  pulsar/requirements.txt
+
+psycopg2
+  devops/data/requirements-external-all.txt
+
+psycopg2==2.6.1
+  kernel_instance_manager/requirements.txt
+
+psycopg2==2.6.2
+  lux/requirements.txt
+
+psycopg2>=2.6.0
+  monorepo/src/pulsar-odm/requirements-dev.txt
+  pulsar-odm/requirements-dev.txt
+
+psycopg2>=2.6.0,<3.0.0
+  monorepo/src/lux/requirements.txt
+
+psycopg2>=2.6.1
+  exchanges/requirements.txt
+
+psycopg2>=2.6.2,<3.0.0
+  dbutils/requirements.txt
+
+ptyprocess
+  devops/data/requirements-external-all.txt
+
+ptyprocess==0.5.1
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+pulsar-odm
+  monorepo/src/pulsar-odm/benchmark/requirements.txt
+  pulsar-odm/benchmark/requirements.txt
+
+py
+  devops/data/requirements-external-all.txt
+
+py==1.4.31
+  logging-utils/requirements-dev.txt
+
+py>=1.4.31
+  kernel_instance_manager/requirements-dev.txt
+
+pyasn1
+  devops/data/requirements-external-all.txt
+
+pyasn1==0.1.9
+  devops/requirements.txt
+
+pycodestyle<=2.0.0
+  dbutils/requirements-dev.txt
+
+pycodestyle==2.0.0
+  bmll-template/requirements-dev.txt
+  jobserve/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+pycodestyle==2.2.0
+  logging-utils/requirements-dev.txt
+
+pycodestyle==2.2.0        # via flake8
+  bmll-api/requirements-dev.txt
+
+pycodestyle>=2.0.0
+  monorepo/src/market_impact/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+pycodestyle>=2.0.0,<3.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+pycosat==0.6.1
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+pycparser
+  devops/data/requirements-external-all.txt
+
+pycparser==2.14
+  devops/requirements.txt
+
+pycrypto
+  devops/data/requirements-external-all.txt
+
+pycrypto==2.6.1
+  devops/requirements.txt
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+pycrypto>=2.6.1,<3.0
+  exchanges/requirements.txt
+
+pycrypto>=2.6.1,<3.0.0
+  dbutils/requirements.txt
+
+pydocstyle==1.0.0
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+pydocstyle>=1.0.0
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  dbutils/requirements.txt
+  jobserve/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+pydocstyle>=1.0.0,<1.1.0
+  market_impact/requirements-dev.txt
+  monorepo/src/lux/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+
+pyflakes
+  devops/data/requirements-external-all.txt
+
+pyflakes==1.3.0
+  logging-utils/requirements-dev.txt
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+pyflakes==1.3.0           # via flake8
+  bmll-api/requirements-dev.txt
+
+pyflakes>=1.2.3
+  algotick/requirements-dev.txt
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  jobserve/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  zzz-pulsar-cloud/requirements-dev.txt
+
+pyflakes>=1.2.3,<2.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+pygithub
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+
+pygments
+  devops/data/requirements-external-all.txt
+  pulsar-queue/requirements-dev.txt
+
+pyinotify
+  devops/data/requirements-external-all.txt
+
+pyjwt
+  devops/data/requirements-external-all.txt
+
+pyjwt==1.4.1
+  lux/requirements.txt
+
+pyjwt>=1.4.1,<2.0.0
+  monorepo/src/lux/requirements.txt
+
+pyjwt~=1.4
+  bmll-api/requirements.txt
+
+pymc3==3.0rc2
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+pyotp>=2.1.1,<3.0.0
+  integration-tests/requirements.txt
+
+pyotp~=2.1
+  bmll-api/requirements.txt
+
+pypi-uploader
+  devops/data/requirements-external-all.txt
+
+pytables==3.2.2
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+pytest
+  algoapi/requirements-dev.txt
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  bmll-technologies/prototypes/job-graph/requirements-test.txt
+  bmll-template/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  flare/requirements-test.txt
+  jobserve/requirements-dev.txt
+  jupyter-extensions/requirements-dev.txt
+  kernel_gateway/requirements-dev.txt
+  lux/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/jupyter-extensions/requirements-dev.txt
+  monorepo/src/logging-utils/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  playground/requirements-dev.txt
+  tickdata/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+
+pytest-asyncio
+  flare/requirements-test.txt
+
+pytest-cov
+  algoapi/requirements-dev.txt
+  bmll-template/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  exchanges/requirements-dev.txt
+  flare/requirements-test.txt
+  jobserve/requirements-dev.txt
+  jupyter-extensions/requirements-dev.txt
+  kernel_gateway/requirements-dev.txt
+  lux/requirements-dev.txt
+  monorepo/src/jupyter-extensions/requirements-dev.txt
+  monorepo/src/logging-utils/requirements-dev.txt
+  monorepo/src/lux/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+
+pytest-cov==2.3.1
+  logging-utils/requirements-dev.txt
+
+pytest-cov>=2.2.1
+  kernel_instance_manager/requirements-dev.txt
+
+pytest-cov>=2.3.0
+  bmll-python/requirements-dev.txt
+
+pytest-cover
+  devops/data/requirements-external-all.txt
+
+pytest-coverage
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  tickdata/requirements-dev.txt
+
+pytest-flakes>=1.0.1
+  kernel_instance_manager/requirements-dev.txt
+
+pytest-flask>=0.10.0
+  kernel_instance_manager/requirements-dev.txt
+
+pytest-pep8>=1.0.6
+  kernel_instance_manager/requirements-dev.txt
+
+pytest-profiling>=1.2.2.dev0
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  bmll-python/requirements-dev.txt
+  dbutils/requirements-dev.txt
+  exchanges/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  tickdata/requirements-dev.txt
+
+pytest-tornado
+  devops/data/requirements-external-all.txt
+  jupyter-extensions/requirements-dev.txt
+  kernel_gateway/requirements-dev.txt
+  monorepo/src/jupyter-extensions/requirements-dev.txt
+  zzz-kernel_gateway/requirements-dev.txt
+
+pytest-xdist
+  devops/data/requirements-external-all.txt
+  jupyter-extensions/requirements-dev.txt
+  monorepo/src/jupyter-extensions/requirements-dev.txt
+
+pytest-xdist>=1.14
+  kernel_instance_manager/requirements-dev.txt
+
+pytest==3.0.3
+  logging-utils/requirements-dev.txt
+
+pytest>=2.9.0,<3.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+pytest>=2.9.1
+  kernel_instance_manager/requirements-dev.txt
+
+pytest>=2.9.2
+  bmll-python/requirements-dev.txt
+
+pytest>=3.0.0
+  dbutils/requirements-dev.txt
+
+pytest>=3.0.3
+  image-builder/bmll_python3/tests/container_tests/requirements-dev.txt
+
+pytest_asyncio
+  devops/data/requirements-external-all.txt
+
+pytest_cov
+  devops/data/requirements-external-all.txt
+
+pytest_cover
+  devops/data/requirements-external-all.txt
+
+pytest_coverage
+  devops/data/requirements-external-all.txt
+
+pytest_flask
+  devops/data/requirements-external-all.txt
+
+pytest_tornado
+  devops/data/requirements-external-all.txt
+
+pytest_travis_fold
+  devops/data/requirements-external-all.txt
+
+pytest_xdist
+  devops/data/requirements-external-all.txt
+
+pytest~=3.0
+  exchanges/requirements-dev.txt
+  integration-tests/requirements.txt
+
+python-dateutil
+  devops/data/requirements-external-all.txt
+
+python-dateutil==2.5.2
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+python-dateutil==2.6.0    # via moto
+  bmll-api/requirements-dev.txt
+
+python-dateutil>=2.1,<3.0.0
+  lux/requirements.txt
+  monorepo/src/lux/requirements.txt
+
+python-dateutil~=2.5
+  bmll-api/requirements.txt
+
+python-editor==1.0
+  kernel_instance_manager/requirements.txt
+
+python-keyczar
+  devops/data/requirements-py3.txt
+  devops/data/requirements.txt
+
+python-slugify
+  bmll-technologies/prototypes/job-graph/requirements.txt
+
+python_dateutil
+  devops/data/requirements-external-all.txt
+
+python_editor
+  devops/data/requirements-external-all.txt
+
+python_keyczar
+  devops/data/requirements-external-all.txt
+
+pytrends==3.2.0
+  image-builder/bmll_python3/src/requirements/requirements-pip-optional.txt
+
+pytz
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+
+pytz==2016.4
+  lux/requirements.txt
+
+pytz==2016.6.1
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+pytz==2016.7              # via moto
+  bmll-api/requirements-dev.txt
+
+pytz>=2016.2
+  exchanges/requirements.txt
+
+pytz>=2016.4
+  monorepo/src/lux/requirements.txt
+
+pyvirtualdisplay>=0.2,<1.0
+  integration-tests/requirements.txt
+
+pyxdg
+  devops/data/requirements-external-all.txt
+
+pyyaml
+  devops/data/requirements-external-all.txt
+  lux/requirements-soft.txt
+
+pyyaml==3.11
+  devops/requirements.txt
+
+pyyaml>=3.11,<4.0
+  exchanges/requirements.txt
+  monorepo/src/lux/requirements-soft.txt
+
+pyzmq
+  devops/data/requirements-external-all.txt
+
+pyzmq==15.4.0
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+qrcode==5.3
+  bmll-portal/requirements.txt
+
+quantecon==0.3.3
+  image-builder/bmll_python3/src/requirements/requirements-pip-optional.txt
+
+rarfile
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+
+raven>=5.31.0
+  jobserve/requirements.txt
+
+redis
+  bmll-technologies/requirements.txt
+  devops/data/requirements-external-all.txt
+  jobserve/requirements.txt
+
+redis==2.10.5
+  lux/requirements.txt
+
+redis>=2.10.5,<3.0.0
+  monorepo/src/lux/requirements.txt
+
+requests
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  devops/data/requirements-py3-conda.txt
+  devops/data/requirements.txt
+
+requests<=2.10.0
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+requests==2.11.1
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+requests==2.11.1          # via moto
+  bmll-api/requirements-dev.txt
+
+requests==2.9.1
+  kernel_instance_manager/requirements.txt
+
+requests>=2.10.0
+  bmll-python/requirements.txt
+
+requests>=2.10.0,<3.0
+  exchanges/requirements.txt
+
+requests[security]==2.11.0
+  jobserve/requirements.txt
+
+requests_toolbelt
+  devops/data/requirements-external-all.txt
+
+rsa
+  devops/data/requirements-external-all.txt
+
+rsa==3.3
+  devops/requirements.txt
+
+s3transfer
+  devops/data/requirements-external-all.txt
+
+s3transfer==0.0.1
+  devops/requirements.txt
+
+scikit-learn==0.18
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+scipy
+  devops/data/requirements-external-all.txt
+
+scipy==0.18.0
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+scipy>=0.17.1
+  baysinf/requirements.txt
+
+seaborn==0.7.1
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+selenium
+  devops/data/requirements-external-all.txt
+
+selenium>=2.53.1,<3.0.0
+  integration-tests/requirements.txt
+
+setproctitle
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+
+setproctitle<=1.1.9
+  monorepo/src/pulsar/requirements.txt
+  pulsar/requirements.txt
+
+setuptools
+  devops/data/requirements-external-all.txt
+
+simplegeneric
+  devops/data/requirements-external-all.txt
+
+simplegeneric==0.8.1
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+simplejson
+  devops/data/requirements-external-all.txt
+
+simplejson~=3.8
+  bmll-api/requirements.txt
+
+six
+  devops/data/requirements-external-all.txt
+
+six==1.10.0
+  devops/requirements.txt
+
+six==1.10.0               # via moto, pip-tools, python-dateutil
+  bmll-api/requirements-dev.txt
+
+snowballstemmer
+  devops/data/requirements-external-all.txt
+
+sphinx
+  devops/data/requirements-external-all.txt
+  lux/requirements-soft.txt
+
+sphinx==1.4.8
+  bmll-docs/requirements-dev.txt
+
+sphinx>=0.1.9,<2.0.0
+  monorepo/src/lux/requirements-soft.txt
+
+sphinx>=1.4.1
+  algoapi/requirements-dev.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+
+sphinx_rtd_theme
+  devops/data/requirements-external-all.txt
+
+sphinx_rtd_theme>=0.1.9
+  algoapi/requirements-dev.txt
+  bmll-docs/requirements-dev.txt
+
+sqlalchemy
+  devops/data/requirements-external-all.txt
+  lux/requirements-dev.txt
+
+sqlalchemy==1.0.12
+  kernel_instance_manager/requirements.txt
+
+sqlalchemy==1.0.15 # if we put >=1.0.15, it installs a beta version!
+  dbutils/requirements.txt
+  exchanges/requirements.txt
+
+sqlalchemy>=1.0.0
+  monorepo/src/pulsar-odm/requirements.txt
+  pulsar-odm/requirements.txt
+
+sqlalchemy>=1.0.14,<2.0.0
+  monorepo/src/lux/requirements-dev.txt
+
+statsmodels
+  devops/data/requirements-external-all.txt
+
+statsmodels==0.6.1
+  image-builder/bmll_python3/src/requirements/requirements-conda.txt
+
+statsmodels>=0.6.1,<1.0
+  algoapi/requirements.txt
+
+storagemanager==0.3.0
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+sympy==1.0
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+tables
+  algotick/requirements.txt
+  devops/data/requirements-external-all.txt
+  devops/roles/make-wheels/files/requirements-py3-binary.txt
+
+tables==3.2.2
+  bmll-portal/requirements.txt
+  devops/requirements.txt
+  tickdata/requirements.txt
+
+tables==3.2.2 # warning! this dependency is duplicated in compiled.txt!
+  exchanges/requirements.txt
+
+tensorflow==0.11.0rc2
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+theano==0.8.2
+  image-builder/bmll_python3/src/requirements/requirements-conda-optional.txt
+
+tickdata==0.3.8
+  bmll-portal/requirements.txt
+  image-builder/bmll_python3/src/requirements/requirements-pip.txt
+
+tickdata>=0.3.7
+  exchanges/requirements.txt
+
+tickdata~=0.3.8
+  algoapi/requirements.txt
+  bmll-api/requirements.txt
+
+tornado
+  devops/data/requirements-external-all.txt
+
+tornado==4.3
+  kernel_gateway/requirements.txt
+  zzz-kernel_gateway/requirements.txt
+
+traitlets
+  devops/data/requirements-external-all.txt
+
+traitlets==4.2.1
+  devops/requirements.txt
+  kernel_instance_manager/requirements.txt
+
+twine
+  devops/data/requirements-external-all.txt
+  lux/requirements-dev.txt
+  monorepo/src/lux/requirements-dev.txt
+
+unidecode
+  dbutils/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  lux/requirements-soft.txt
+  monorepo/src/lux/requirements-soft.txt
+
+unidecode<=0.4.19
+  monorepo/src/pulsar/requirements.txt
+  pulsar/requirements.txt
+
+virtualenv
+  devops/data/requirements-external-all.txt
+
+websocket-client==0.35.0
+  kernel_instance_manager/requirements.txt
+
+websocket_client
+  devops/data/requirements-external-all.txt
+
+werkzeug
+  devops/data/requirements-external-all.txt
+
+werkzeug<=0.11.10
+  monorepo/src/pulsar/requirements-dev.txt
+  pulsar/requirements-dev.txt
+
+werkzeug==0.11.11         # via moto
+  bmll-api/requirements-dev.txt
+
+werkzeug==0.11.5
+  kernel_instance_manager/requirements.txt
+
+wheel
+  algoapi/requirements-dev.txt
+  algotick/requirements-dev.txt
+  baysinf/requirements-dev.txt
+  bmll-docs/requirements-dev.txt
+  bmll-docs/requirements.txt
+  bmll-python/requirements-dev.txt
+  devops/data/requirements-external-all.txt
+  market_impact/requirements-dev.txt
+  monorepo/src/market_impact/requirements-dev.txt
+  pulsar-queue/requirements.txt
+
+wheel==0.29.0
+  kernel_instance_manager/requirements.txt
+
+wsgiref==0.1.2
+  devops/requirements.txt
+
+www-authenticate==0.9.2
+  devops/requirements.txt
+
+xmltodict==0.10.2         # via moto
+  bmll-api/requirements-dev.txt
+
+
