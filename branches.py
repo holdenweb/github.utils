@@ -4,7 +4,7 @@ import urllib
 
 from collections import namedtuple
 
-from github import Github
+import github3
 import jinja2
 
 pr_rname = namedtuple("pr_rname", ['pr', 'repo'])
@@ -17,12 +17,12 @@ GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 ORG_NAME = os.environ['GITHUB_ORGANISATION']
 
 os.chdir('repos')
-gh = Github(GITHUB_TOKEN)
+gh = github3.login(token=GITHUB_TOKEN)
 
-org = gh.get_organization(ORG_NAME)
+org = gh.organization(ORG_NAME)
 
-for repo in org.get_repos("private"):
-    brs = [br for br in repo.get_branches() if not br.name.startswith("release")]
+for repo in sorted(org.repositories(type="private"), key=lambda x: x.name):
+    brs = [br for br in repo.branches() if not br.name.startswith("release")]
     if len(brs) > 3:
         print("{}: {} branches".format(repo.name, len(brs)))
 #        for br in brs:
