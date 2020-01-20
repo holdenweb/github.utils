@@ -23,7 +23,6 @@ org = gh.organization(ORG_NAME)
 
 for repo in sorted(org.repositories(type="private"), key=lambda x: x.name):
     brs = [br for br in repo.branches() if not br.name.startswith("release")]
-    if len(brs) > 3:
-        print("{}: {} branches".format(repo.name, len(brs)))
-#        for br in brs:
-#            print("    ", br.name)
+    print("{}: {} branches".format(repo.name, len(brs)))
+    for br in brs:
+       print("    ", br.name)

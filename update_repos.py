@@ -20,6 +20,6 @@ else:
 for repo in repolist:
     print("==== {}: {}".format(repo.name, repo.ssh_url))
     if os.path.exists(repo.name):
-        os.system("cd {}; git checkout master && git pull; git checkout develop && git pull".format(repo.name))
+        os.system("cd {}; git fetch --all".format(repo.name))
     else:
         os.system('git clone {}'.format(repo.ssh_url))
